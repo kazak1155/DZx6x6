@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index',[\App\Http\Controllers\BookController::class, 'index']);
+Route::post('/store',[\App\Http\Controllers\BookController::class, 'store'])->name('store-book');
